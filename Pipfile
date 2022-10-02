@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+sqlalchemy = "*"
+flask-sqlalchemy = "*"
+python-dotenv = "*"
+cx-oracle = "*"
+
+[dev-packages]
+black = "*"
+random-address = "*"
+requests = "*"
+names = "*"
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+# app = "flask --app app run"
+app = "python app.py"
+format = "black app.py"
+touch_db = "sqlite3 students.sqlite3"

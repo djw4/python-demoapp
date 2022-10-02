@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h4>Students - Add New</h4>
+
+{%- for category, message in get_flashed_messages(with_categories = true) %}
+<div class="alert alert-danger">
+   {{ message }}
+</div>
+{%- endfor %}
+
+<form action="{{ request.path }}" method="post">
+   <div class="mb-3">
+      <label class="form-label" for="name">Name</label><br>
+      <input type="text" class="form-control" name="name" placeholder="John Smith" /><br>
+   </div>
+   <div class="mb-3">
+      <label class="form-label" for="email">City</label><br>
+      <input type="text" class="form-control" name="city" placeholder="Melbourne" /><br>
+   </div>
+   <div class="mb-3">
+      <label class="form-label" for="addr">Address</label><br>
+      <textarea name="addr" class="form-control" placeholder="123 Example Street, Example Town"></textarea><br>
+   </div>
+   <div class="mb-3">
+      <label class="form-label" for="pin">Post Code</label><br>
+      <input type="text" class="form-control" name="pin" placeholder="3000" /><br>
+   </div>
+   <div class="mb-3">
+      <input type="submit" class="btn btn-primary" value="Submit" />
+   </div>
+</form>
+{% endblock %}
