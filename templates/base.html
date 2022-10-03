@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet"
     crossorigin="anonymous">
-  <title>Flask SQLAlchemy Example</title>
+  <title>Demo Site</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
       <header class="pb-3 mb-4 border-bottom">
         <a href="{{ url_for('show_all') }}"
           class="d-flex align-items-center text-dark text-decoration-none">
-          <span class="fs-4">Flask SQLAlchemy Example</span>
+          <span class="fs-4">Demo Site</span>
         </a>
         {%- for message in get_flashed_messages() %}
         {{ message }}
