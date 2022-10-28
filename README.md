@@ -1,5 +1,6 @@
 # Python Demo App
 
+<img src="./screenshot1.png" width="600">
 
 ## Setup
 
